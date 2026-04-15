@@ -7,9 +7,9 @@
 
 ## 📖 Overview
 
-**NexPager** leverages Web3 technologies and Algorand smart contracts to create a fully decentralized captive portal for WiFi authentication. By eliminating the need for traditional credit card gateways or localized user credentials, NexPager allows users to authenticate and seamlessly pay for premium internet access natively using **Algorand TestNet ALGOs** via their **Pera Wallet**.
+Traditional public WiFi access in spaces like cafes, airports, and events typically relies on cumbersome centralized systems—forcing users to input mobile numbers, emails, or credit card details via captive portals. 
 
-If you've ever wanted a true "Pay-As-You-Go" crypto model for public WiFi (e.g., at coffee shops, venues, airports, or events), NexPager brings that vision to life.
+**NexPager** revolutionizes this flow by introducing a fully decentralized, frictionless alternative. Built entirely on Web3 architecture and IoT hardware (Raspberry Pi + OpenNDS), NexPager allows users to instantly unlock premium internet access using **NFT/token-based criteria or native ALGO payments** directly from their Pera Wallet. No passwords, no credit card risks—just true, self-custodial "Pay-As-You-Go" internet powered by the **Algorand TestNet.**
 
 ---
 
