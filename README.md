@@ -1,4 +1,4 @@
-# 📶 NexPager: Crypto-Native WiFi Captive Portal
+?# 📶 NexPager: Crypto-Native WiFi Captive Portal
 
 [![Algorand TestNet](https://img.shields.io/badge/Blockchain-Algorand%20TestNet-black?style=for-the-badge&logo=algorand)](https://testnet.algoexplorer.io/)
 [![Next.js](https://img.shields.io/badge/Frontend-Next.js%2014-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
@@ -62,8 +62,9 @@ sequenceDiagram
 
 ### 3. x402 Protocol Integration
 We implement the emerging **x402 (Payment Required) standard** specifically adapted for the **Algorand Virtual Machine (AVM)**. This allows a decentralized payload construction and validation across node boundaries.
-- **Repository:** Extends and utilizes the [`@x402-avm`](https://github.com/x402-avm) packages (`@x402-avm/avm`, `@x402-avm/core`, `@x402-avm/next`) for building standardized web3 receipts and payloads.
-- **Reference:** https://spec.x402.org/v2
+- **Core Documentation & Specs**: [GoPlausible Algorand x402 Documentation](https://github.com/GoPlausible/.github/tree/main/profile/algorand-x402-documentation)
+- **Packages Used:** Utilizes the `@x402-avm` library packages (`@x402-avm/avm`, `@x402-avm/core`, `@x402-avm/fetch`, `@x402-avm/next`) to build standard web3 receipts and valid payloads.
+- **Protocol Reference:** https://spec.x402.org/v2
 
 ### 4. Smart Contracts (PyTeal / AlgoKit)
 While the captive portal currently verifies fast native ALGO transfers via the Indexer, the repository includes a complete **PyTeal Smart Contract** (App ID: `758808363`).
