@@ -2042,7 +2042,7 @@
     react-shadow "^19.1.0"
     zustand "^4.5.4"
 
-"@x402-avm/avm@^2.0.0":
+"@x402-avm/avm@^2.6.1":
   version "2.6.1"
   resolved "https://registry.npmjs.org/@x402-avm/avm/-/avm-2.6.1.tgz"
   integrity sha512-sC/eD7jVmv9aC4kMYJHnVjv5jDA9j7IHtOzFEmKOaSIypf++fdnM/o9NmY9/cqcuEoSG6zCmjRLshdiqv8dsYw==
@@ -2050,7 +2050,7 @@
     "@algorandfoundation/algokit-utils" "10.0.0-alpha.39"
     "@x402-avm/core" "^2.6.1"
 
-"@x402-avm/core@^2.0.0", "@x402-avm/core@^2.6.1", "@x402-avm/core@~2.6.1":
+"@x402-avm/core@^2.6.1", "@x402-avm/core@~2.6.1":
   version "2.6.1"
   resolved "https://registry.npmjs.org/@x402-avm/core/-/core-2.6.1.tgz"
   integrity sha512-TPI1OixT/MrxjMeuNG8+WV37GhtaoV+D4qhkld3zpSomyJ8lx3sPsaJsB2+fqihcCf8DnP80KetoPmSvDSojtA==
@@ -2079,7 +2079,7 @@
     viem "^2.39.3"
     zod "^3.24.2"
 
-"@x402-avm/next@^2.0.0":
+"@x402-avm/next@^2.6.1":
   version "2.6.1"
   resolved "https://registry.npmjs.org/@x402-avm/next/-/next-2.6.1.tgz"
   integrity sha512-U8C4bk0bPPbSfVVy4L73bHFFr8TriVIMq3L4Pj7Y0+Rfh0hFakuPAt+Q6YPEYUiBFKjmzHkLocLj/Nu1wg+s8A==
