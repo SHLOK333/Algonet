@@ -141,8 +141,9 @@ python scripts/deploy_testnet.py
 
 ---
 
-## 📹 Demo
-[Original Architectural Concept & Demo Video](https://www.loom.com/share/05e377af44174fc4b6e9823f67ba60e9?sid=06403338-0b7b-48ca-b0fa-bb3f1541aadb)
+## 📹 RASPBERRY PI
+<img width="771" height="544" alt="Screenshot 2026-04-15 161544" src="https://github.com/user-attachments/assets/83ed8a05-58fe-4a72-b61e-8e1de2f196ff" />
+
 
 ---
 
