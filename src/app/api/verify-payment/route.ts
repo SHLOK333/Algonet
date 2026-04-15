@@ -1,12 +1,12 @@
 import { NextResponse } from "next/server";
-import { withX402Auth } from "@x402-avm/next";
+import { withX402 } from "@x402-avm/next";
 import crypto from "crypto";
 
 const EXPECTED_PAYEE = process.env.NEXT_PUBLIC_X402_PAYEE_ADDRESS || "TKUTQNBZAMY26ZT6AYRX26556WUYCB65I5QLUHB6NPY6ZDKYD7VZECHPMU";
 const FAS_KEY = "mysecretkey";
 
-// The withX402Auth wrapper natively decodes the x402 header & verifies the crypto signature.
-export const POST = withX402Auth(async (req, paymentContext) => {
+// The withX402 wrapper natively decodes the x402 header & verifies the crypto signature.
+export const POST = withX402(async (req, paymentContext) => {
   try {
     const { ip, tok } = await req.json().catch(() => ({ ip: null, tok: null }));
 
