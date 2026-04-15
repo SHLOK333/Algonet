@@ -18,6 +18,8 @@ import {
   waitForConfirmation,
 } from "algosdk";
 import { PeraWalletConnect } from "@perawallet/connect";
+import { encodePaymentSignatureHeader } from "@x402-avm/core/http";
+import { ALGORAND_TESTNET_CAIP2 } from "@x402-avm/avm";
 
 import { ALGOKIT_CONFIG, ALGORAND_NETWORKS, X402_CONFIG } from "@/config";
 
