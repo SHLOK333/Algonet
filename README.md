@@ -95,6 +95,8 @@ An immutable ledger function that tracks users, amounts paid, payment references
 - **Explorer Link:** [View on Pera Explorer](https://testnet.explorer.perawallet.app/application/758808363/)
 
 ---
+<img width="4218" height="3097" alt="Patent" src="https://github.com/user-attachments/assets/eb151de3-fec6-4875-9de9-19660435a6ed" />
+
 
 ## 🚀 Quick Start (Local Development)
 
