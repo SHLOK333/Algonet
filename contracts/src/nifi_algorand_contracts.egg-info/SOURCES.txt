@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/nifi/__init__.py
+src/nifi/contract.py
+src/nifi_algorand_contracts.egg-info/PKG-INFO
+src/nifi_algorand_contracts.egg-info/SOURCES.txt
+src/nifi_algorand_contracts.egg-info/dependency_links.txt
+src/nifi_algorand_contracts.egg-info/requires.txt
+src/nifi_algorand_contracts.egg-info/top_level.txt
+tests/test_contract.py

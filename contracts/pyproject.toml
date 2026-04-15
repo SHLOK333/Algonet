@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nexpager-algorand-contracts"
+version = "0.1.0"
+description = "AlgoKit scaffold for nexpager WiFi access policy contracts"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "py-algorand-sdk>=2.0.0",
+  "algokit-utils",
+  "pyteal>=0.27.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

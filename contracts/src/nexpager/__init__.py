@@ -1,0 +1,1 @@
+"""NexPager Algorand contract package."""

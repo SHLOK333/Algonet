@@ -1,0 +1,7 @@
+[project]
+name = "nexpager-algorand-contracts"
+source = "src/nexpager"
+description = "AlgoKit scaffold for nexpager WiFi access policy contracts"
+
+[deploy]
+network = "testnet"
