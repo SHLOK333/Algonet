@@ -60,13 +60,18 @@ sequenceDiagram
 - `/api/fas/auth`: Hits the physical router's `preauth` endpoint to temporarily allow the user's IP to access Algorand node infrastructure before they fully pay.
 - `/api/fas`: The core cryptographic validator. Uses the **AlgoNode TestNet Indexer** to scrape the blockchain for the exact `txid` submitted by the user. It verifies the receiver matches the venue's configured wallet, the amount is correct, and the transaction is a valid `pay` transfer. Then, it securely signs an authorization payload and redirects the user to the OpenNDS gateway to unlock their internet.
 
-### 3. Smart Contracts (PyTeal / AlgoKit)
+### 3. x402 Protocol Integration
+We implement the emerging **x402 (Payment Required) standard** specifically adapted for the **Algorand Virtual Machine (AVM)**. This allows a decentralized payload construction and validation across node boundaries.
+- **Repository:** Extends and utilizes the [`@x402-avm`](https://github.com/x402-avm) packages (`@x402-avm/avm`, `@x402-avm/core`, `@x402-avm/next`) for building standardized web3 receipts and payloads.
+- **Reference:** https://spec.x402.org/v2
+
+### 4. Smart Contracts (PyTeal / AlgoKit)
 While the captive portal currently verifies fast native ALGO transfers via the Indexer, the repository includes a complete **PyTeal Smart Contract** (App ID: `758808363`).
 - **`configure_wifi`:** Allows the Venue/Creator to safely store their payee address, minimum required payment, and specific Asset IDs (for NFT-based access) on-chain.
 - **`record_session`:** An immutable ledger function that tracks users, amounts paid, payment references, and increments a global session counter.
 - **Deployment Script:** A seamless Python script located at `contracts/scripts/deploy_testnet.py` automatically generates a dev account, waits for an ALGO deposit, compiles the PyTeal to TEAL bytecodes, and deploys it to the TestNet.
 
-### 4. Physical Infrastructure (Raspberry Pi & OpenNDS)
+### 5. Physical Infrastructure (Raspberry Pi & OpenNDS)
 - Uses `hostapd` for the wireless access point and `dnsmasq` for DHCP.
 - **OpenNDS** serves as the Forward Authentication Service (FAS) enforcing firewall rules until the NexPager portal issues the cryptographically signed `tok`.
 
