@@ -169,21 +169,39 @@ const SignMessage: FC<SignMessageProps> = ({ query }) => {
     };
 
     setPaymentProof(proof);
-    return proof;
+    
+    // Create actual x402 header using the signed bytes
+    const base64Signature = Buffer.from(signedTxns[0]).toString('base64');
+    
+    return {
+       proof,
+       x402Header: encodePaymentSignatureHeader({
+          caip2Protocol: ALGORAND_TESTNET_CAIP2,
+          encodedSignedTxn: base64Signature,
+       })
+    };
   };
 
   const handleAuthenticate = async () => {
     setIsPending(true);
     try {
       let paymentProofForAuth: PaymentProof | null = paymentProof;
+      let x402HeaderVal = "";
 
       if (authMode === "pay_per_use") {
-        paymentProofForAuth = await handleRealTestnetPayment();
+        const paymentResult = await handleRealTestnetPayment();
+        paymentProofForAuth = paymentResult.proof;
+        x402HeaderVal = paymentResult.x402Header;
+      }
+
+      const headers: Record<string, string> = { "Content-Type": "application/json" };
+      if (authMode === "pay_per_use" && x402HeaderVal) {
+        headers["x-402-payment-signature"] = x402HeaderVal;
       }
 
       const response = await fetch("/api/fas", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers,
         body: JSON.stringify({
           query,
           algorandAddress,
